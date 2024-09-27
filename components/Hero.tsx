@@ -6,6 +6,7 @@ import { storyData } from "../constants";
 import Image from "next/image";
 
 function Hero() {
+  
   const [activeVideo, setActiveVideo] = useState<number | null>(null);
 
   useEffect(() => {
@@ -24,11 +25,11 @@ function Hero() {
   };
 
   return (
-    <div className="bg-[#C5E2D5] flex justify-center py-16 items-center flex-col px-6 gap-y-7 pb-40">
+    <div className="bg-[#C5E2D5] flex justify-center py-16 items-center flex-col px-6  pb-40">
       <section className="w-full">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center gap-8 lg:gap-36 mb-8 flex-col md:flex-row items-center">
-            <div className="border-[1px] border-black rotate-90 " />
+          <div className="flex justify-center lg:gap-36 mb-8 flex-col md:flex-row items-center" data-aos="fade-right">
+            <div className="border-[1px] border-black  w-[20%]" />
             <div className="text-center md:text-left w-full md:w-[60%] lg:w-[40%] font-bricolage_grotesque">
               <h2 className="text-sm text-blue font-bold uppercase mb-4">
                 Our Story
@@ -44,6 +45,7 @@ function Hero() {
               <div
                 key={story.id}
                 className="relative shadow-white shadow-lg transition duration-300 ease-in-out"
+                data-aos="fade-left"
               >
                 {activeVideo === story.id ? (
                   <div className="relative w-full h-full">
@@ -76,12 +78,12 @@ function Hero() {
           </div>
 
           <div className="mt-12 flex flex-col-reverse md:flex-row justify-between items-center">
-            <p className="w-full md:w-[50%] text-center md:text-left text-[16px] md:text-[18px] font-semibold mb-6 md:mb-0">
+            <p className="w-full md:w-[50%] text-center md:text-left text-[16px] md:text-[18px] font-semibold mb-6 md:mb-0"  data-aos="fade-left">
               Aliquet nec mauris tortor at sed erat. Ut faucibus habitant risus
               morbi quis egestas etiam lorem. Feugiat lorem aliquam eget mattis
               cursus. Turpis massa arcu sagittis interdum. Integer molestie.
             </p>
-            <button className="bg-black text-white font-bold font-bricolage text-[18px] md:text-[26px] py-3 px-6 rounded-full hover:bg-blue transition duration-300">
+            <button className="bg-black text-white font-bold font-bricolage text-[18px] md:text-[26px] py-3 px-6 rounded-full hover:bg-blue transition duration-300"  data-aos="fade-right">
               Know More
             </button>
           </div>
