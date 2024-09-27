@@ -2,7 +2,7 @@ import Banner from "../component/Banner";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import History from "@/component/History";
-import Navbar from "@/component/Navbar";
+import Navbar from "@/components/Navbar";
 import Product from "@/component/Product";
 import Steps from "@/component/Steps";
 
