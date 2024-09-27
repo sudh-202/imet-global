@@ -6,7 +6,7 @@ import { storyData } from "../constants";
 import Image from "next/image";
 
 function Hero() {
-  
+
   const [activeVideo, setActiveVideo] = useState<number | null>(null);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ function Hero() {
                       src={story.videoSrc}
                       controls
                       autoPlay
-                      className="w-full h-auto rounded-lg"
+                      className="w-full h-full rounded-lg"
                     />
                     {/* Close button */}
                     <button
@@ -69,21 +69,22 @@ function Hero() {
                     alt={`Story ${story.id}`}
                     width={500}
                     height={300}
-                    className="rounded-lg cursor-pointer w-full h-auto"
+                    className="rounded-lg cursor-pointer w-full h-auto transition-transform duration-300 hover:scale-105"
                     onClick={() => handleImageClick(story.id)}
                   />
+
                 )}
               </div>
             ))}
           </div>
 
           <div className="mt-12 flex flex-col-reverse md:flex-row justify-between items-center">
-            <p className="w-full md:w-[50%] text-center md:text-left text-[16px] md:text-[18px] font-semibold mb-6 md:mb-0"  data-aos="fade-left">
+            <p className="w-full md:w-[50%] text-center md:text-left text-[16px] md:text-[18px] font-semibold mb-6 md:mb-0" data-aos="fade-left">
               Aliquet nec mauris tortor at sed erat. Ut faucibus habitant risus
               morbi quis egestas etiam lorem. Feugiat lorem aliquam eget mattis
               cursus. Turpis massa arcu sagittis interdum. Integer molestie.
             </p>
-            <button className="bg-black text-white font-bold font-bricolage text-[18px] md:text-[26px] py-3 px-6 rounded-full hover:bg-blue transition duration-300"  data-aos="fade-right">
+            <button className="bg-black text-white font-bold font-bricolage text-[18px] md:text-[26px] py-3 px-6 rounded-full hover:bg-blue transition duration-300" data-aos="fade-right">
               Know More
             </button>
           </div>
