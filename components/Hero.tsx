@@ -28,8 +28,8 @@ function Hero() {
     <div className="bg-[#C5E2D5] flex justify-center py-16 items-center flex-col px-6  pb-40">
       <section className="w-full">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center lg:gap-36 mb-8 flex-col md:flex-row items-center" data-aos="fade-right">
-            <div className="border-[1px] border-black  w-[20%]" />
+          <div className="flex justify-left lg:gap-10 mb-8 flex-col md:flex-row items-center" data-aos="fade-right">
+            <div className="border-[1px] border-black  w-[28%]" />
             <div className="text-center md:text-left w-full md:w-[60%] lg:w-[40%] font-bricolage_grotesque">
               <h2 className="text-sm text-blue font-bold uppercase mb-4">
                 Our Story

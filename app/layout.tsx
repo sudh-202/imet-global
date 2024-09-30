@@ -64,7 +64,7 @@ export default function RootLayout({
         </style>
       </head>
       <body
-        className={`${poppins.variable} ${urbanist.variable} ${bricolageGrotesque.variable} w-screen overflow-x-hidden`} // Updated local variable usage
+        className={`${poppins.variable} ${urbanist.variable} ${bricolageGrotesque.variable} `} // Updated local variable usage
       >
         {children}
       </body>
