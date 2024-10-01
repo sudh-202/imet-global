@@ -31,7 +31,7 @@ function Hero() {
       {/* Banner Page */}
       <div className="bg-[#C5E2D5] flex justify-center py-16 items-center flex-col md:px-10  md:pb-40">
         <section className="w-full">
-          <div className="container mx-auto px-6">
+          <div className="max-w-7xl mx-auto px-6">
             <div
               className="flex justify-left lg:gap-10 mb-8 flex-col md:flex-row md:items-center"
               data-aos="fade-right"
@@ -108,7 +108,8 @@ function Hero() {
       </div>
 
       {/* Second Section */}
-      <div className="bg-main md:px-32 px-6 md:py-28 py-12 flex justify-center md:gap-20 2xl:gap-80 gap-10 flex-col md:flex-row">
+      <div className="bg-main md:px-32 px-6 md:py-28 py-12 f">
+      <div className="max-w-7xl mx-auto flex justify-center md:gap-20 2xl:gap-80 gap-10 flex-col md:flex-row">
         <div className="" data-aos="fade-right">
           <h2 className="text-blue md:text-7xl text-3xl font-semibold font-bricolage md:mb-6 tracking-wider">
             New Age SKills Driven
@@ -133,17 +134,19 @@ function Hero() {
         <div className="" data-aos="fade-left">
           <Image src="/images/girl.webp" alt="girl" width={320} height={100} />
         </div>
+        </div>
       </div>
 
       {/* Third Section */}
       <main className=" bg-main">
-        <div className="bg-blue rounded-3xl  text-5xl px-6 md:px-32 py-24">
+        <div className="bg-blue rounded-3xl  text-5xl px-6 md:px-24 py-24">
+          <div className="max-w-7xl mx-auto">
           <div
             className="flex justify-left lg:gap-10 mb-8 flex-col md:flex-row md:items-center"
             data-aos="fade-right"
           >
             <div className="border-[1px] border-black  w-[28%]" />
-            <div className="text-left w-full md:w-[60%] lg:w-[40%] font-bricolage_grotesque">
+            <div className="text-left w-full md:w-[60%] lg:w-[40%] font-bricolage_grotesque" data-aos="fade-down">
               <h2 className="text-white md:text-7xl text-5xl font-bold md:mb-4 font-bricolage md:mt-0 mt-4">
                 Why
               </h2>
@@ -160,7 +163,7 @@ function Hero() {
             </div>
           </div>
           {/* Cards Section */}
-          <div className="flex flex-col lg:flex-row justify-center items-center w-full space-y-8 lg:space-y-0 lg:space-x-8">
+          <div className="flex flex-col lg:flex-row justify-center items-center w-full space-y-8 lg:space-y-0 lg:space-x-8" data-aos="fade-left">
             {cardsData.map((card, index) => {
               const isEven = index % 2 === 0;
               return (
@@ -202,11 +205,13 @@ function Hero() {
               );
             })}
           </div>
+          </div>
         </div>
       </main>
 
       {/* Fourth Section */}
       <section className="bg-main py-12 md:py-24 md:px-36 flex flex-col justify-center items-center">
+      <div className="max-w-7xl mx-auto">
         {/* Stats Section */}
         <div
           className="flex flex-wrap justify-between mb-12 text-center space-y-4 lg:space-y-0 lg:text-left w-full px-4 sm:px-6 md:px-0"
@@ -278,6 +283,7 @@ function Hero() {
               </div>
             </div>
           ))}
+        </div>
         </div>
       </section>
     </main>
