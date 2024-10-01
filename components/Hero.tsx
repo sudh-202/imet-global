@@ -4,9 +4,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { storyData } from "../constants";
 import Image from "next/image";
+import { sectionData } from '../constants/index';
 
 function Hero() {
   const [activeVideo, setActiveVideo] = useState<number | null>(null);
+  const { stats, sections } = sectionData;
 
   useEffect(() => {
     AOS.init({
@@ -25,6 +27,7 @@ function Hero() {
 
   return (
     <main className=" bg-blue">
+      {/* Banner Page */}
       <div className="bg-[#C5E2D5] flex justify-center py-16 items-center flex-col md:px-10  md:pb-40">
         <section className="w-full">
           <div className="container mx-auto px-6">
@@ -99,8 +102,9 @@ function Hero() {
           </div>
         </section>
       </div>
-      <div className="bg-main md:px-32 px-6 md:py-28 py-12 flex justify-evenly md:gap-20 gap-10 flex-col md:flex-row">
-        <div className="">
+      {/* Second Section */}
+      <div className="bg-main md:px-32 px-6 md:py-28 py-12 flex justify-center md:gap-20 2xl:gap-80 gap-10 flex-col md:flex-row">
+        <div className="" data-aos="fade-right">
           <h2 className="text-blue md:text-7xl text-3xl font-semibold font-bricolage md:mb-6 tracking-wider">
             New Age SKills Driven
           </h2>
@@ -113,7 +117,7 @@ function Hero() {
           <Image
             src="/images/circle.webp"
             alt="girl"
-            width={100}
+            width={950}
             height={100}
             className="md:-mt-[100px] -mt-[55px] md:-ml-[120px] -ml-[40px] md:w-[950px] w-[750px]"
           />
@@ -121,10 +125,53 @@ function Hero() {
             For your formal Education
           </p>
         </div>
-        <div className="">
+        <div className="" data-aos="fade-left">
           <Image src="/images/girl.webp" alt="girl" width={320} height={100} />
         </div>
       </div>
+      {/* Third Section */}
+      <div className=" bg-main">
+        <div className="bg-blue rounded-3xl h-[50vh] text-5xl p-20">This is 3rd section(Under Developement)</div>
+      </div>
+      {/* Fourth Section */}
+<section className="bg-main py-12 md:py-24 md:px-36 flex flex-col justify-center items-center">
+  {/* Stats Section */}
+  <div className="flex flex-wrap justify-between mb-12 text-center space-y-4 lg:space-y-0 lg:text-left w-full px-4 sm:px-6 md:px-0" data-aos="fade-down">
+    {stats.map((stat, index) => (
+      <div key={index} className="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8 lg:mb-0">
+        <h3 className="text-5xl sm:text-6xl md:text-7xl font-semibold font-bricolage" style={{ color: stat.color }}>
+          {stat.count}
+        </h3>
+        <p className="text-lg font-semibold text-gray-700">{stat.label}</p>
+      </div>
+    ))}
+  </div>
+
+  {/* Sections */}
+  <div className="space-y-12 w-full px-4 sm:px-6 md:px-0">
+    {sections.map((section, index) => (
+      <div key={index} className="flex flex-col items-center lg:flex-row lg:justify-center lg:space-x-8 space-y-8 lg:space-y-0">
+        {/* Title (Left) */}
+        <div className="w-full lg:w-1/3 lg:text-left" data-aos="fade-right">
+          <h3 className="text-xl sm:text-2xl font-bold text-blue font-bricolage">{section.title}</h3>
+        </div>
+
+        {/* Image (Center) */}
+        <div className="w-full lg:w-1/3 flex justify-center" data-aos="fade-up">
+          <Image src={section.image} alt={section.title} className="translate-y-10" width={350} height={100} />
+        </div>
+
+        {/* Description (Right) */}
+        <div className="w-full lg:w-1/3 lg:text-left" data-aos="fade-left">
+          <p className="mt-4 text-black font-semibold">{section.description}</p>
+          <a href="#" className="inline-block mt-4 text-red-500 font-semibold hover:underline hover:text-red">KNOW MORE</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
     </main>
   );
 }

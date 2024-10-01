@@ -22,7 +22,7 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="">
+    <footer className="bg-red">
       <div className="bg-blue flex justify-center flex-col items-center space-y-5 py-24">
         <h2 className="text-4xl md:text-6xl font-bricolage font-semibold text-white">
           Career Helpline

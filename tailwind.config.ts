@@ -29,6 +29,9 @@ const config: Config = {
         "theme-text-color-light": "#847571",
         "main" : "#F5EDD9",
         "blue":"#06B5C5",
+        "orange" : "#CC6B49",
+        "yellow" : "#E5A632",
+        "red": "#981D26",
       },
       boxShadow: {
         "btn-shadow": " 0px 8px 32px 0px rgba(221, 183, 112, 0.25)",
