@@ -37,6 +37,30 @@ export const storyData = [
   },
 ];
 
+// Why Imet
+export const cardsData = [
+  {
+    title: "A Not for Profit Entity",
+    description:
+      "Being a part of Pradurbhav Foundation for Skills and Social Development, a Not for Profit (Section 8) Entity, iMET just like its name (Innovation, Mentoring, Entrepreneurship & Talent), is committed towards making the New-Gen Future ready with Smart Digital Education.",
+    image: "/images/w1.webp", // Replace with actual image path
+  },
+  {
+    title: "IVY League Delivery",
+    description:
+      "Schedule and reserve classrooms at one campus or multiple campuses. Keep detailed records of student attendance.",
+    image: "/images/w2.webp", // Replace with actual image path
+  },
+  {
+    title: "New In-demand Specializations",
+    description:
+      "Because the world is now moving into the 'Metaverse,' iMET is making its learners equipped with holistic dynamics of the Digital World by introducing Internet of Things (IoT) as one of the major specializations.",
+    image: "/images/w3.webp", // Replace with actual image path
+  },
+];
+
+
+
 // Stats Section
 
 export const sectionData = {

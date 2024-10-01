@@ -4,7 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { storyData } from "../constants";
 import Image from "next/image";
-import { sectionData } from '../constants/index';
+import { sectionData } from "../constants/index";
+import { cardsData } from "../constants/index";
 
 function Hero() {
   const [activeVideo, setActiveVideo] = useState<number | null>(null);
@@ -40,9 +41,9 @@ function Hero() {
                 <h2 className="text-sm text-blue font-bold uppercase mb-4 pt-4 md:pt-0">
                   Our Story
                 </h2>
-                <h1 className="text-5xl font-bold mb-8 font-bricolage">
+                <h2 className="text-5xl font-bold mb-8 font-bricolage">
                   Our Story of Innovation and Trust
-                </h1>
+                </h2>
               </div>
             </div>
 
@@ -89,7 +90,10 @@ function Hero() {
                 data-aos="fade-left"
               >
                 iMET is a global community to develop, promote and encourage
-                <span className="font-bold"> innovation, Mentorship, Entrepreneurship and Talent Building </span>
+                <span className="font-bold">
+                  {" "}
+                  innovation, Mentorship, Entrepreneurship and Talent Building{" "}
+                </span>
                 with Practitioner’s or Doer’s perspective.
               </p>
               <button
@@ -102,6 +106,7 @@ function Hero() {
           </div>
         </section>
       </div>
+
       {/* Second Section */}
       <div className="bg-main md:px-32 px-6 md:py-28 py-12 flex justify-center md:gap-20 2xl:gap-80 gap-10 flex-col md:flex-row">
         <div className="" data-aos="fade-right">
@@ -129,49 +134,152 @@ function Hero() {
           <Image src="/images/girl.webp" alt="girl" width={320} height={100} />
         </div>
       </div>
+
       {/* Third Section */}
-      <div className=" bg-main">
-        <div className="bg-blue rounded-3xl h-[50vh] text-5xl p-20">This is 3rd section(Under Developement)</div>
-      </div>
+      <main className=" bg-main">
+        <div className="bg-blue rounded-3xl  text-5xl px-6 md:px-32 py-24">
+          <div
+            className="flex justify-left lg:gap-10 mb-8 flex-col md:flex-row md:items-center"
+            data-aos="fade-right"
+          >
+            <div className="border-[1px] border-black  w-[28%]" />
+            <div className="text-left w-full md:w-[60%] lg:w-[40%] font-bricolage_grotesque">
+              <h2 className="text-white md:text-7xl text-5xl font-bold md:mb-4 font-bricolage md:mt-0 mt-4">
+                Why
+              </h2>
+              <h2 className="md:text-7xl text-5xl font-bold mb-8 font-bricolage">
+                iMet Global
+              </h2>
+              <Image
+                src="/images/blackcircle.webp"
+                alt="girl"
+                width={950}
+                height={100}
+                className="md:-mt-[130px] -mt-[85px] md:-ml-[90px] -ml-[40px] md:w-[950px] w-[750px]"
+              />
+            </div>
+          </div>
+          {/* Cards Section */}
+          <div className="flex flex-col lg:flex-row justify-center items-center w-full space-y-8 lg:space-y-0 lg:space-x-8">
+            {cardsData.map((card, index) => {
+              const isEven = index % 2 === 0;
+              return (
+                <div
+                  key={index}
+                  className={`p-6 rounded-lg transition-transform hover:scale-105 w-full lg:w-1/3 flex flex-col items-center justify-start h-[400px] ${
+                    isEven
+                      ? "bg-black text-white shadow-2xl shadow-white"
+                      : "bg-white text-black shadow-2xl shadow-black"
+                  }`}
+                >
+                  {/* Image */}
+                  <div className="flex justify-center mb-4">
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      width={100}
+                      height={100}
+                      className="rounded-full -mt-[50px]"
+                    />
+                  </div>
+                  {/* Title */}
+                  <h3
+                    className={`text-2xl font-bold text-center font-bricolage mb-4 ${
+                      isEven ? "text-white" : "text-black"
+                    }`}
+                  >
+                    {card.title}
+                  </h3>
+                  {/* Description */}
+                  <p
+                    className={`text-left text-lg ${
+                      isEven ? "text-gray-300" : "text-gray-700"
+                    }`}
+                  >
+                    {card.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </main>
+
       {/* Fourth Section */}
-<section className="bg-main py-12 md:py-24 md:px-36 flex flex-col justify-center items-center">
-  {/* Stats Section */}
-  <div className="flex flex-wrap justify-between mb-12 text-center space-y-4 lg:space-y-0 lg:text-left w-full px-4 sm:px-6 md:px-0" data-aos="fade-down">
-    {stats.map((stat, index) => (
-      <div key={index} className="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8 lg:mb-0">
-        <h3 className="text-5xl sm:text-6xl md:text-7xl font-semibold font-bricolage" style={{ color: stat.color }}>
-          {stat.count}
-        </h3>
-        <p className="text-lg font-semibold text-gray-700">{stat.label}</p>
-      </div>
-    ))}
-  </div>
-
-  {/* Sections */}
-  <div className="space-y-12 w-full px-4 sm:px-6 md:px-0">
-    {sections.map((section, index) => (
-      <div key={index} className="flex flex-col items-center lg:flex-row lg:justify-center lg:space-x-8 space-y-8 lg:space-y-0">
-        {/* Title (Left) */}
-        <div className="w-full lg:w-1/3 lg:text-left" data-aos="fade-right">
-          <h3 className="text-xl sm:text-2xl font-bold text-blue font-bricolage">{section.title}</h3>
+      <section className="bg-main py-12 md:py-24 md:px-36 flex flex-col justify-center items-center">
+        {/* Stats Section */}
+        <div
+          className="flex flex-wrap justify-between mb-12 text-center space-y-4 lg:space-y-0 lg:text-left w-full px-4 sm:px-6 md:px-0"
+          data-aos="fade-down"
+        >
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8 lg:mb-0"
+            >
+              <h3
+                className="text-5xl sm:text-6xl md:text-7xl font-semibold font-bricolage"
+                style={{ color: stat.color }}
+              >
+                {stat.count}
+              </h3>
+              <p className="text-lg font-semibold text-gray-700">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
 
-        {/* Image (Center) */}
-        <div className="w-full lg:w-1/3 flex justify-center" data-aos="fade-up">
-          <Image src={section.image} alt={section.title} className="translate-y-10" width={350} height={100} />
+        {/* Sections */}
+        <div className="space-y-12 w-full px-4 sm:px-6 md:px-0">
+          {sections.map((section, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center lg:flex-row lg:justify-center lg:space-x-8 space-y-8 lg:space-y-0"
+            >
+              {/* Title (Left) */}
+              <div
+                className="w-full lg:w-1/3 lg:text-left"
+                data-aos="fade-right"
+              >
+                <h3 className="text-xl sm:text-2xl font-bold text-blue font-bricolage">
+                  {section.title}
+                </h3>
+              </div>
+
+              {/* Image (Center) */}
+              <div
+                className="w-full lg:w-1/3 flex justify-center"
+                data-aos="fade-up"
+              >
+                <Image
+                  src={section.image}
+                  alt={section.title}
+                  className="translate-y-10"
+                  width={350}
+                  height={100}
+                />
+              </div>
+
+              {/* Description (Right) */}
+              <div
+                className="w-full lg:w-1/3 lg:text-left"
+                data-aos="fade-left"
+              >
+                <p className="mt-4 text-black font-semibold">
+                  {section.description}
+                </p>
+                <a
+                  href="#"
+                  className="inline-block mt-4 text-red-500 font-semibold hover:underline hover:text-red"
+                >
+                  KNOW MORE
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
-
-        {/* Description (Right) */}
-        <div className="w-full lg:w-1/3 lg:text-left" data-aos="fade-left">
-          <p className="mt-4 text-black font-semibold">{section.description}</p>
-          <a href="#" className="inline-block mt-4 text-red-500 font-semibold hover:underline hover:text-red">KNOW MORE</a>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
-
-
+      </section>
     </main>
   );
 }
