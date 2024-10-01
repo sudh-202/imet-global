@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Urbanist } from "next/font/google";
-import { Bricolage_Grotesque as BricolageGrotesqueFont } from "next/font/google"; // Renamed import
 import "./globals.css";
 
 const poppins = Poppins({
@@ -48,7 +47,7 @@ const bricolageGrotesque = Urbanist({
 
 export const metadata: Metadata = {
   title: "Imet Global",
-  description: "Coffee Shop Designed By Mursaleen",
+  description: "",
 };
 
 export default function RootLayout({
@@ -64,7 +63,7 @@ export default function RootLayout({
         </style>
       </head>
       <body
-        className={`${poppins.variable} ${urbanist.variable} ${bricolageGrotesque.variable} `} // Updated local variable usage
+        className={`${poppins.variable} ${urbanist.variable} ${bricolageGrotesque.variable} bg-main`} // Updated local variable usage
       >
         {children}
       </body>

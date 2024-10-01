@@ -5,7 +5,7 @@
 export const navbarMenu = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Courses", href: "/courses" },
+    // { name: "Courses", href: "/courses" },
     { name: "Gurupool", href: "/gurupool" },
     { name: "Gallery", href: "/gallery" },
     { name: "In News & Media", href: "/news-media" },
@@ -23,17 +23,17 @@ export const navbarMenu = [
 export const storyData = [
   {
     id: 1,
-    imageSrc: "/images/h1.webp", // Path to image
-    videoSrc: "/videos/section-8.mp4", // Path to video
+    imageSrc: "/images/b1.webp", 
+    videoSrc: "/videos/section-8.mp4",
   },
   {
     id: 2,
-    imageSrc: "/images/h2.webp",
+    imageSrc: "/images/b2.webp",
     videoSrc: "/videos/car-model.mp4",
   },
   {
     id: 3,
-    imageSrc: "/images/h3.webp",
+    imageSrc: "/images/b3.webp",
     videoSrc: "/videos/trained.mp4",
   },
 ];

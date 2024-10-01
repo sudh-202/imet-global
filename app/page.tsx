@@ -8,7 +8,7 @@ import Steps from "@/component/Steps";
 
 export default function Home() {
   return (
-    <div className="w-full ">
+    <div className="overflow-x-clip w-full">
       <Navbar />
       <Hero />
       {/* <Product />

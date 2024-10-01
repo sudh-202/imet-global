@@ -27,7 +27,7 @@ function Footer() {
         <h2 className="text-4xl md:text-6xl font-bricolage font-semibold text-white">
           Career Helpline
         </h2>
-        <p className="text-center text-white text-sm md:text-base">
+        <p className="text-center text-white text-sm md:text-base md:px-0 px-10">
           Book your slot to attend career counselling sessions from industry practitioners
         </p>
         <button

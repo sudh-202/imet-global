@@ -21,7 +21,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="bg-main border-dashed flex items-center gap-5 justify-between py-[40px] px-5 lg:px-10">
+    <div className="bg-main border-dashed flex items-center gap-5 justify-between py-[40px] px-5 lg:px-4 max-w-7xl mx-auto">
       {/* Logo */}
       <div className="flex items-center gap-x-2">
         <Image
@@ -50,14 +50,14 @@ function Navbar() {
             </li>
           ))}
         </ul>
-        <div className="flex gap-5">
+        {/* <div className="flex gap-5">
           <button className="border-[#CC6B49] border-2 py-3 px-7 bg-white rounded-full text-black">
             Login
           </button>
           <button className="border-2 lg:py-3 lg:px-7 rounded-full bg-blue text-white">
             Sign In
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile & Tablet Drawer Menu */}
@@ -78,14 +78,14 @@ function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="flex flex-col mt-10 gap-5 w-[80%]">
+          {/* <div className="flex flex-col mt-10 gap-5 w-[80%]">
             <button className="border-[#CC6B49] border-2 py-3 px-7 bg-white rounded-full text-black">
               Login
             </button>
             <button className="border-2 py-3 px-7 rounded-full bg-blue text-white">
               Sign In
             </button>
-          </div>
+          </div> */}
         </div>
       )}
     </div>
