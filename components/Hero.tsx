@@ -308,9 +308,8 @@ function Hero() {
         </div>
       ))}
     </div>
-    {/* Add the logos section */}
+   
     <div className="mt-10 flex flex-wrap justify-center gap-8">
-      {/* Replace the divs below with actual img tags or logos */}
       <div className="w-24">
         <img src="/path-to-logo-1.png" alt="Logo 1" />
       </div>
