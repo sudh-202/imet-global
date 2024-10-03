@@ -93,3 +93,27 @@ export const sectionData = {
     }
   ]
 };
+
+// Testimonials Section
+
+export const testimonilsData = [
+  {
+    name: "Melba King",
+    role: "Consultant",
+    rating: 5,
+    feedback: "Aenean adipiscing amet dui cursus rhoncus nibh nec tortor fusce. Elementum dui tempor eget ac vitae hendrerit nisl.",
+  },
+  {
+    name: "Cora Murphy",
+    role: "Architect",
+    rating: 5,
+    feedback: "Aenean adipiscing amet dui cursus rhoncus nibh nec tortor fusce. Elementum dui tempor eget ac vitae hendrerit nisl.",
+  },
+  {
+    name: "Sherly Boyer",
+    role: "Engineer",
+    rating: 5,
+    feedback: "Aenean adipiscing amet dui cursus rhoncus nibh nec tortor fusce. Elementum dui tempor eget ac vitae hendrerit nisl.",
+  },
+  // Add more testimonials as needed...
+];
